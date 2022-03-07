@@ -1,0 +1,458 @@
+/************* GLOBAL CSS ***************************/
+
+body {
+    background:black url('/wp-content/uploads/2018/09/bg_img-2.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:50% 50%;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    overflow-x: hidden;
+    color:#fff;
+}
+a, p, h1, h2, h3, h4, h5, span, li, .entry-content{
+    color:#fff;
+}
+h1, h2, h3, h4, h5{
+    font-family:'Montserrat';
+}
+a, p, span, li, .entry-content{
+    font-family:'Open Sans';
+}
+.site,
+.site-header{
+    background:transparent;
+}
+.site-content{
+    background:rgba(0,0,0,0.8);
+    margin:0;
+}
+.page .post-thumbnail{
+	display:none;
+}
+#bg1, #bg2, #bg3 {
+    width:auto;
+    height:100vh;
+    display:none;
+    position:fixed;
+    z-index:-1;
+}
+#bg1{
+	display:block;
+}
+.site-main{
+    width:1200px;
+    margin:0 auto;
+}
+.btn{
+    text-decoration:none;
+    text-align:center;
+    display:inline-block;
+    line-height:40px;
+    font-size:18px;
+    padding:0 20px 0 40px;
+    background:#07f;
+    transition:all .3s;
+	cursor:pointer;
+}
+.btn:after{
+    content:'\2192';
+    position:relative;
+    opacity:0;
+    right:-20px;
+    transition:.5s;
+}
+.btn:hover{
+    background:#005fcc;
+    color:#fff;
+    padding:0 30px;
+}
+.btn:hover:after{
+    opacity:1;
+    right:-15px;
+}
+.bottomContent{
+    margin:0;
+}
+.site-footer{
+    background:rgba(0,0,0,0.8);
+    padding:0;
+}
+.footerImage{
+    display:none;
+}
+.footerBottomDivider{
+    height:0;
+}
+.footerLeft, .footerCenter, .footerRight{
+    margin:0;
+}
+/*************** CONTACT FORM *****************/
+
+#contact{
+    height:100vh;
+    position:fixed;
+    width:400px;
+    right:0;
+    z-index:99;
+    background:#000;
+}
+#contact.hide-contact{
+    right:-400px;
+}
+#closeMe{
+    position:absolute;
+    text-decoration:none;
+    background:#333;
+    padding:5px 10px;
+    cursor:pointer;
+}
+#closeMe:hover{
+    color:#fff;
+}
+#contact.slideIn {
+    animation: slideIn .5s ease-out;
+}
+#contact.slideOut{
+    animation: slideOut .5s ease-out;
+}
+@keyframes slideIn{
+    0%      {right:-400px;}
+    100%    {right:0;}
+}
+@keyframes slideOut{
+    0%      {right:0;}
+    100%    {right:-400px;}
+}
+#contact h4{
+    font-family:'Montserrat';
+    text-align:center;
+    margin:90px 0 0;
+}
+.wpcf7-form {
+    width:80%;
+    margin:0 auto;
+}
+.wpcf7-form p{
+    margin:0;
+}
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form select,
+.wpcf7-form textarea{
+    width:100%;
+    padding:7px 0;
+    text-indent:7px;
+    margin:10px 0;
+    background:#fff;
+}
+.wpcf7-form input[type="submit"]{
+    border:0;
+    color:#fff;
+    font-family:'Montserrat';
+    margin-top:10px;
+    padding:0;
+    width:100%;
+}
+.wpcf7-form input[type="submit"]:focus{
+    outline:0
+}
+.wpcf7-form input.wpcf7-not-valid,
+.wpcf7-form select.wpcf7-not-valid,
+.wpcf7-form textarea.wpcf7-not-valid{
+    border:1px solid #f00;
+    background-color:#fee;
+}
+.wpcf7-form label,
+span.wpcf7-not-valid-tip{
+    display:none;
+}
+div.wpcf7-validation-errors{
+    border:1px solid #f00;
+    font-family:'Open Sans';
+}
+/*************    Header CSS   **********************************************/
+.topHeaderBar{
+    display:none;
+}
+.site-header{
+    position:fixed;
+    width:100%;
+    margin:0 auto;
+    z-index:9;
+}
+.site-header-main{
+    width:1200px;
+    margin:0 auto;
+}
+#site-header-menu-search{
+    display:none;
+}
+.header-image a img{
+    height:150px;
+}
+.site-header-menu{
+    width:80%;
+}
+.main-navigation .primary-menu{
+    float:right;
+}
+.main-navigation li{
+    margin:0 10px;
+    vertical-align:top;
+}
+.main-navigation a{
+    font-family:'Montserrat';
+    font-size:20px;
+    line-height:2;
+    font-weight:normal;
+    padding:0 25px;
+    margin:55px 0 0;
+    text-transform:uppercase;
+    transition:all .2s;
+}
+.main-navigation a:hover{
+    color:#fff;
+    border-bottom: 1px solid #fff;
+    margin:45px 0 0;
+    line-height:2.5;
+}
+.main-navigation li.contact a{
+    cursor:pointer;
+}
+.main-navigation li.current_page_item a{
+    border-bottom: 1px solid #fff;
+    font-weight:normal;
+}
+.main-navigation li.current_page_item a:hover{
+    line-height:2;
+    margin-top:55px;
+}
+/*************** Mobile Menu ********************************/
+
+#mobile-site-header-menu {
+    display:none;
+}
+
+.site-header-menu-mobile {
+    display:none;
+}
+
+/****************  Body CSS   ***************************/
+
+/******************* HOME ***********************/
+
+.home-section{
+    min-height:800px;
+    display: block;
+    align-items: center;
+}
+.one{
+    display:flex;
+    height:100vh;
+}
+.two{
+    padding:0;
+}
+.three .inner,
+.four .inner{
+    padding:90px 0 0;
+}
+.inner{
+    display:block;
+    width:100%;
+}
+.inner h2{
+    text-align:center;
+    font-size:2em;
+    margin:20px 0 60px;
+}
+.inner h3{
+    margin:20px 0;
+}
+.full{
+    width:100%;
+}
+.full p{
+    width:80%;
+    margin:0 auto 30px;
+    text-align:center;
+}
+.half{
+    width:49%;
+    display:inline-block;
+    position:relative;
+    vertical-align:top;
+}
+.half p{
+    margin:0;
+    padding:30px 20px 0 0;
+}
+.third p,
+.third h3{
+    width:90%;
+    margin:10px auto;
+}
+.third{
+    width:33%;
+    display:inline-block;
+    position:relative;
+    vertical-align:top;
+}
+.third img{
+    margin-bottom:40px;
+}
+.one span{
+    display:block;
+    font-size:100px;
+    font-weight:900;
+    line-height:0.9;
+    text-transform:uppercase;
+    font-family:'Montserrat';
+}
+.one h1,
+.one p{
+    text-align:right;
+    padding:0;
+}
+.one h1{
+    margin-top:40px;
+}
+.arrow{
+    text-align: center;
+    position: relative;
+    bottom: -200px;
+    cursor:pointer;
+}
+.hideMe{
+    visibility:hidden;
+}
+.showMe{
+    visibility:visible;
+}
+.arrow svg{
+    font-size:60px;
+}
+#logo{
+    width:95%;
+    margin:0 auto;
+}
+.owl-carousel .owl-nav{
+    width:100%;
+    position:relative;
+    top:-200px;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    width:auto;
+    display:inline-block;
+    vertical-align:top;
+    margin:0;
+}
+.owl-theme .owl-nav [class*=owl-]:hover{
+    background:transparent !important;
+}
+.owl-theme .owl-nav [class*=owl-]:hover span{
+    color:#fff;
+}
+.owl-theme .owl-nav [class*=owl-]:focus{
+    outline:0;
+}
+.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span{
+    font-size:50px;
+    color:#666;
+    transition:all .3s;
+}
+.owl-carousel .owl-nav button.owl-prev{
+    text-align:left;
+    float:left;
+    margin-left:-30px;
+}
+.owl-carousel .owl-nav button.owl-next{
+    text-align:right;
+    float:right;
+    margin-right:-30px;
+}
+.cta-section{
+	padding-bottom:120px;
+}
+.cta-section .inner{
+	text-align:center;
+}
+.cta-section .inner h2{
+	margin-bottom:20px;
+}
+.cta-section .inner h4{
+	margin-bottom:20px;
+}
+/*********************** SUBPAGE ***********************/
+
+.main-title{
+    background:rgba(0,0,0,0.8);
+    padding:200px 0 120px;
+}
+.main-title h1{
+    margin:0;
+    text-align:center;
+    font-family:'Montserrat';
+    font-weight:normal;
+}
+.entry-content a img{
+    width:100%;
+}
+.row{
+    margin:0 0 180px;
+}
+#about .row{
+    min-height:680px;
+    padding-top:5px;
+}
+.row:last-child{
+    padding-bottom:90px;
+}
+.row .inner p{
+    text-align:left;
+}
+.row .inner img{
+    width:100%;
+}
+div.dark_square .pp_content, div.dark_square .pp_left, div.dark_square .pp_middle, div.dark_square .pp_right{
+    background:rgba(0,0,0,0.6);
+}
+.pp_content_container .pp_left{
+    padding-left:0;
+}
+.pp_hoverContainer{
+    box-shadow:0 0 40px #000;
+}
+a.pp_contract, a.pp_expand{
+    right:-10px;
+}
+a.pp_next, a.pp_previous{
+    width:0;
+}
+a.pp_close{
+    position:relative;
+    margin:0 auto;
+}
+div.dark_square .pp_nav{
+    display:none !important;
+}
+
+/***************** 404 *********************/
+
+.error404 .site-content{
+	min-height:100vh;
+}
+.error404 .site-main{
+	display: flex;
+    align-items: center;
+    height: 100vh;
+}
+.error-404 a ,
+.error-404 a:hover{
+    color: #fff;
+    text-decoration: none;
+}
